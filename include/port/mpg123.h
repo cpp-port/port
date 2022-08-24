@@ -1,1 +1,1 @@
-../libmpg123/mpg123.h
+../../libmpg123/mpg123.h
