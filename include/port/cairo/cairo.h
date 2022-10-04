@@ -839,13 +839,13 @@ cairo_public void
 cairo_user_to_device (cairo_t *cr, double *x, double *y);
 
 cairo_public void
-cairo_user_to_device_distance (cairo_t *cr, double *dx, double *dy);
+cairo_user_to_device_distance (cairo_t *cr, double *Δx, double *Δy);
 
 cairo_public void
 cairo_device_to_user (cairo_t *cr, double *x, double *y);
 
 cairo_public void
-cairo_device_to_user_distance (cairo_t *cr, double *dx, double *dy);
+cairo_device_to_user_distance (cairo_t *cr, double *Δx, double *Δy);
 
 /* Path creation functions */
 cairo_public void
@@ -887,10 +887,10 @@ cairo_arc_to (cairo_t *cr,
 */
 
 cairo_public void
-cairo_rel_move_to (cairo_t *cr, double dx, double dy);
+cairo_rel_move_to (cairo_t *cr, double Δx, double Δy);
 
 cairo_public void
-cairo_rel_line_to (cairo_t *cr, double dx, double dy);
+cairo_rel_line_to (cairo_t *cr, double Δx, double Δy);
 
 cairo_public void
 cairo_rel_curve_to (cairo_t *cr,
@@ -3054,7 +3054,7 @@ cairo_matrix_multiply (cairo_matrix_t	    *result,
 
 cairo_public void
 cairo_matrix_transform_distance (const cairo_matrix_t *matrix,
-				 double *dx, double *dy);
+				 double *Δx, double *Δy);
 
 cairo_public void
 cairo_matrix_transform_point (const cairo_matrix_t *matrix,
@@ -3142,7 +3142,7 @@ cairo_public cairo_bool_t
 cairo_region_contains_point (const cairo_region_t *region, int x, int y);
 
 cairo_public void
-cairo_region_translate (cairo_region_t *region, int dx, int dy);
+cairo_region_translate (cairo_region_t *region, int Δx, int Δy);
 
 cairo_public cairo_status_t
 cairo_region_subtract (cairo_region_t *dst, const cairo_region_t *other);

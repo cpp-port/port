@@ -264,8 +264,8 @@ typedef enum _cairo_internal_device_type {
 #define CAIRO_HAS_TEST_PAGINATED_SURFACE 1
 
 typedef struct _cairo_slope {
-    cairo_fixed_t dx;
-    cairo_fixed_t dy;
+    cairo_fixed_t Δx;
+    cairo_fixed_t Δy;
 } cairo_slope_t, cairo_distance_t;
 
 typedef struct _cairo_point_double {
@@ -279,8 +279,8 @@ typedef struct _cairo_circle_double {
 } cairo_circle_double_t;
 
 typedef struct _cairo_distance_double {
-    double dx;
-    double dy;
+    double Δx;
+    double Δy;
 } cairo_distance_double_t;
 
 typedef struct _cairo_box_double {

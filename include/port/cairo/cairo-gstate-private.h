@@ -190,13 +190,13 @@ cairo_private void
 _cairo_gstate_user_to_device (cairo_gstate_t *gstate, double *x, double *y);
 
 cairo_private void
-_cairo_gstate_user_to_device_distance (cairo_gstate_t *gstate, double *dx, double *dy);
+_cairo_gstate_user_to_device_distance (cairo_gstate_t *gstate, double *Δx, double *Δy);
 
 cairo_private void
 _cairo_gstate_device_to_user (cairo_gstate_t *gstate, double *x, double *y);
 
 cairo_private void
-_cairo_gstate_device_to_user_distance (cairo_gstate_t *gstate, double *dx, double *dy);
+_cairo_gstate_device_to_user_distance (cairo_gstate_t *gstate, double *Δx, double *Δy);
 
 cairo_private void
 _do_cairo_gstate_user_to_backend (cairo_gstate_t *gstate, double *x, double *y);

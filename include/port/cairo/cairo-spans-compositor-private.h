@@ -64,13 +64,13 @@ struct cairo_spans_compositor {
     cairo_int_status_t (*draw_image_boxes) (void *surface,
 					    cairo_image_surface_t *image,
 					    cairo_boxes_t *boxes,
-					    int dx, int dy);
+					    int Δx, int Δy);
 
     cairo_int_status_t (*copy_boxes) (void *surface,
 				      cairo_surface_t *src,
 				      cairo_boxes_t *boxes,
 				      const cairo_rectangle_int_t *extents,
-				      int dx, int dy);
+				      int Δx, int Δy);
 
     cairo_surface_t * (*pattern_to_surface) (cairo_surface_t *dst,
 					     const cairo_pattern_t *pattern,
