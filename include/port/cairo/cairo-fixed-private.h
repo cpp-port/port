@@ -318,7 +318,7 @@ _cairo_edge_compute_intersection_y_for_x (const cairo_point_t *p1,
 					  const cairo_point_t *p2,
 					  cairo_fixed_t x)
 {
-    cairo_fixed_t y, Δx;
+    cairo_fixed_t y, dx;
 
     if (x == p1->x)
 	return p1->y;
@@ -326,9 +326,9 @@ _cairo_edge_compute_intersection_y_for_x (const cairo_point_t *p1,
 	return p2->y;
 
     y = p1->y;
-    Δx = p2->x - p1->x;
-    if (Δx != 0)
-	y += _cairo_fixed_mul_div_floor (x - p1->x, p2->y - p1->y, Δx);
+    dx = p2->x - p1->x;
+    if (dx != 0)
+	y += _cairo_fixed_mul_div_floor (x - p1->x, p2->y - p1->y, dx);
 
     return y;
 }
@@ -339,7 +339,7 @@ _cairo_edge_compute_intersection_x_for_y (const cairo_point_t *p1,
 					  const cairo_point_t *p2,
 					  cairo_fixed_t y)
 {
-    cairo_fixed_t x, Δy;
+    cairo_fixed_t x, dy;
 
     if (y == p1->y)
 	return p1->x;
@@ -347,9 +347,9 @@ _cairo_edge_compute_intersection_x_for_y (const cairo_point_t *p1,
 	return p2->x;
 
     x = p1->x;
-    Δy = p2->y - p1->y;
-    if (Δy != 0)
-	x += _cairo_fixed_mul_div_floor (y - p1->y, p2->x - p1->x, Δy);
+    dy = p2->y - p1->y;
+    if (dy != 0)
+	x += _cairo_fixed_mul_div_floor (y - p1->y, p2->x - p1->x, dy);
 
     return x;
 }

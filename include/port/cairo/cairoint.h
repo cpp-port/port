@@ -957,8 +957,8 @@ _cairo_path_fixed_new_sub_path (cairo_path_fixed_t *path);
 
 cairo_private cairo_status_t
 _cairo_path_fixed_rel_move_to (cairo_path_fixed_t *path,
-			       cairo_fixed_t	   Δx,
-			       cairo_fixed_t	   Δy);
+			       cairo_fixed_t	   dx,
+			       cairo_fixed_t	   dy);
 
 cairo_private cairo_status_t
 _cairo_path_fixed_line_to (cairo_path_fixed_t *path,
@@ -967,8 +967,8 @@ _cairo_path_fixed_line_to (cairo_path_fixed_t *path,
 
 cairo_private cairo_status_t
 _cairo_path_fixed_rel_line_to (cairo_path_fixed_t *path,
-			       cairo_fixed_t	   Δx,
-			       cairo_fixed_t	   Δy);
+			       cairo_fixed_t	   dx,
+			       cairo_fixed_t	   dy);
 
 cairo_private cairo_status_t
 _cairo_path_fixed_curve_to (cairo_path_fixed_t	*path,
@@ -1307,18 +1307,18 @@ cairo_private void
 _cairo_stroke_style_max_distance_from_path (const cairo_stroke_style_t *style,
 					    const cairo_path_fixed_t *path,
                                             const cairo_matrix_t *ctm,
-                                            double *Δx, double *Δy);
+                                            double *dx, double *dy);
 cairo_private void
 _cairo_stroke_style_max_line_distance_from_path (const cairo_stroke_style_t *style,
 						 const cairo_path_fixed_t *path,
 						 const cairo_matrix_t *ctm,
-						 double *Δx, double *Δy);
+						 double *dx, double *dy);
 
 cairo_private void
 _cairo_stroke_style_max_join_distance_from_path (const cairo_stroke_style_t *style,
 						 const cairo_path_fixed_t *path,
 						 const cairo_matrix_t *ctm,
-						 double *Δx, double *Δy);
+						 double *dx, double *dy);
 
 cairo_private double
 _cairo_stroke_style_dash_period (const cairo_stroke_style_t *style);
@@ -1708,7 +1708,7 @@ _cairo_polygon_add_contour (cairo_polygon_t *polygon,
 			    const cairo_contour_t *contour);
 
 cairo_private void
-_cairo_polygon_translate (cairo_polygon_t *polygon, int Δx, int Δy);
+_cairo_polygon_translate (cairo_polygon_t *polygon, int dx, int dy);
 
 cairo_private cairo_status_t
 _cairo_polygon_reduce (cairo_polygon_t *polygon,

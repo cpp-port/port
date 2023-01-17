@@ -1291,8 +1291,8 @@ struct pixman_edge
     pixman_fixed_t	e;
     pixman_fixed_t	stepx;
     pixman_fixed_t	signdx;
-    pixman_fixed_t	Δy;
-    pixman_fixed_t	Δx;
+    pixman_fixed_t	dy;
+    pixman_fixed_t	dx;
 
     pixman_fixed_t	stepx_small;
     pixman_fixed_t	stepx_big;
