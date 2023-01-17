@@ -73,3 +73,6 @@
 [submodule "tiff4"]
 	path = tiff4
 	url = ../tiff4
+[submodule "libarchive"]
+	path = libarchive
+	url = ../libarchive.git
