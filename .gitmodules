@@ -76,3 +76,6 @@
 [submodule "libarchive"]
 	path = libarchive
 	url = ../libarchive.git
+[submodule "libmysql"]
+	path = libmysql
+	url = ../libmysql
